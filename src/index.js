@@ -1,19 +1,32 @@
-// Função que soma dois números
-function somar() {}
+function somar(a, b) {
+  return a + b
+}
 
-// Função que subtrai dois números
-function subtrair() {}
 
-// Função que multiplica dois números
-function multiplicar() {}
+function subtrair(a, b) {
+  return a - b
+}
 
-// Função que divide dois números, com verificação de divisão por zero
-function dividir() {}
 
-// Função que verifica se um número é par
-function ehPar() {}
+function multiplicar(a, b) {
+  return a * b
+}
 
-// Exporta todas as funções para serem usadas nos testes
+
+function dividir(a, b) {
+  if (a === 0 || b === 0) {
+    throw new Error("Error")
+  }
+  
+  return a / b
+}
+
+
+function ehPar(a) {
+  return a % 2 === 0
+}
+
+
 module.exports = {
   somar,
   subtrair,
